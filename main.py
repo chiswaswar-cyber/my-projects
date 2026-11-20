@@ -18,6 +18,6 @@ with smtplib.SMTP('smtp.gmail.com', 587) as connection:
     connection.sendmail(
         from_addr=my_email,
         to_addrs=receiver_email,
-        msg=f"Subject:Be Motivated!\n\n{quote}".encode("utf-8")
+        msg=f"From: {my_email}\nTo: {receiver_email}\nSubject:Be Motivated!\n\n{quote}".encode("utf-8")
                         )
 print("Email sent!")
