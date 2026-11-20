@@ -1,9 +1,10 @@
+import os
 import smtplib
 import datetime as dt
 import random
 my_email = "chiswaswar@gmail.com"
 receiver_email = "esthersitangaika@gmail.com"
-my_password = "zvmwarqodfehqhal"
+my_password =os.environ.get("MY_PASSWORD")
 now = dt.datetime.now()
 weekday = now.weekday()
 with open("quote.txt", encoding="cp1252") as quote_file:
